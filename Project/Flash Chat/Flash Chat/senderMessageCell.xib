@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="senderMessageCell" rowHeight="82" id="FQ9-Pg-DHi" customClass="senderMessageCell" customModule="Flash_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FQ9-Pg-DHi" id="E1y-wB-hfr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XV-Td-04M">
+                        <rect key="frame" x="10" y="10" width="260" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="aRD-d1-Ioa">
+                                <rect key="frame" x="10" y="10" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aRD-d1-Ioa" firstAttribute="leading" secondItem="0XV-Td-04M" secondAttribute="leading" constant="10" id="NPK-Kb-OHJ"/>
+                            <constraint firstAttribute="bottom" secondItem="aRD-d1-Ioa" secondAttribute="bottom" constant="10" id="OsU-5F-GK5"/>
+                            <constraint firstAttribute="trailing" secondItem="aRD-d1-Ioa" secondAttribute="trailing" constant="10" id="UEu-ed-Vwb"/>
+                            <constraint firstItem="aRD-d1-Ioa" firstAttribute="top" secondItem="0XV-Td-04M" secondAttribute="top" constant="10" id="gtK-St-R5Z"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VeE-Ow-FGR">
+                        <rect key="frame" x="275" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Max-Nc-OFu"/>
+                            <constraint firstAttribute="height" constant="40" id="gh7-ir-twp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VeE-Ow-FGR" firstAttribute="leading" secondItem="0XV-Td-04M" secondAttribute="trailing" constant="5" id="6mL-9w-j9y"/>
+                    <constraint firstItem="0XV-Td-04M" firstAttribute="leading" secondItem="E1y-wB-hfr" secondAttribute="leading" constant="10" id="DRp-Q6-Gdb"/>
+                    <constraint firstItem="VeE-Ow-FGR" firstAttribute="top" secondItem="E1y-wB-hfr" secondAttribute="top" constant="10" id="FxZ-Cx-tj8"/>
+                    <constraint firstAttribute="bottom" secondItem="0XV-Td-04M" secondAttribute="bottom" constant="9.5" id="ZPd-oZ-mOf"/>
+                    <constraint firstAttribute="trailing" secondItem="VeE-Ow-FGR" secondAttribute="trailing" constant="5" id="l4n-7T-7yx"/>
+                    <constraint firstItem="0XV-Td-04M" firstAttribute="top" secondItem="E1y-wB-hfr" secondAttribute="top" constant="10" id="lq7-jj-jh2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="pEq-H5-3vV"/>
+            <connections>
+                <outlet property="imageAvatar" destination="VeE-Ow-FGR" id="hJS-Xj-L8o"/>
+                <outlet property="labelMessageBody" destination="aRD-d1-Ioa" id="0BG-5Z-PuX"/>
+                <outlet property="messageView" destination="0XV-Td-04M" id="ndh-Fw-8SU"/>
+            </connections>
+            <point key="canvasLocation" x="76.811594202898561" y="27.455357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
